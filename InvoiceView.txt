@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-50 min-h-screen p-4 flex items-center justify-center">
+  <div class="bg-white max-w-md w-full p-6 rounded-2xl shadow-sm border border-slate-200 space-y-6">
+    
+    <div class="text-center">
+      <img src="https://drive.google.com/uc?export=view&id=1X1AAGszM8j_OwjtUu41ecFCWPumLvO_C" class="max-w-[50px] mx-auto mb-2">
+      <h1 class="text-xl font-bold text-slate-800 tracking-wide">STORE MILA STUFF</h1>
+      <p class="text-[10px] text-slate-400">Desa Jontro RT 001/RW 002, Kec. Wedarijaksa, Kab. Pati</p>
+    </div>
+
+    <div class="border-t border-dashed pt-4 text-xs space-y-1.5 text-slate-600">
+      <div class="flex justify-between"><span>No. Invoice:</span><span class="font-mono font-bold text-slate-800"><?= tx.id ?></span></div>
+      <div class="flex justify-between"><span>Tanggal Transaksi:</span><span><?= tx.tanggal ?></span></div>
+      <div class="flex justify-between"><span>Nama Pelanggan:</span><span class="font-semibold text-slate-800"><?= tx.pelanggan ?></span></div>
+      <div class="flex justify-between"><span>Kasir Melayani:</span><span><?= tx.kasir ?></span></div>
+      <div class="flex justify-between"><span>Status Pembayaran:</span><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800"><?= tx.status ?></span></div>
+    </div>
+
+    <div class="border-t border-dashed pt-4">
+      <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Rincian Item Belanja</h3>
+      <p class="text-sm text-slate-800 bg-slate-50 p-3 rounded-xl border border-slate-100 whitespace-pre-line font-medium leading-relaxed"><?= tx.detail ?></p>
+    </div>
+
+    <div class="border-t border-dashed pt-4 flex justify-between items-center">
+      <span class="text-sm font-bold text-slate-700">Total Pembayaran</span>
+      <span class="text-xl font-black text-slate-900">Rp <?= tx.total ?></span>
+    </div>
+
+    <div class="text-center text-[10px] text-slate-400 pt-2 border-t border-slate-100">
+      Terima kasih banyak atas kunjungan dan pesanan Anda!<br>Nota ini merupakan bukti transaksi digital yang sah.
+    </div>
+
+  </div>
+</body>
+</html>
